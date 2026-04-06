@@ -13,6 +13,11 @@ public class LinkedLifeCycle {
 
         System.out.println(hasCycle(head));
 
+      /// it will have time complexity of O(n) ALWAYS 
+      /// AND space complexity with hashet is o(n)
+      /// but space complexity can be reduced upto O(1) using 
+      /// Floyd’s Cycle Detection
+
         /*
          * head = [3,2,0,-4]
          * pos = 1
