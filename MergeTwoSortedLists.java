@@ -3,8 +3,15 @@ import java.util.LinkedList;
 
 public class MergeTwoSortedLists {
     public static void main(String[] args) {
-       LinkedList<Integer> list1 = new LinkedList<>(Arrays.asList(1,2,4));
-       LinkedList<Integer> list2 = new LinkedList<>(Arrays.asList(1,3,4));
+       ListNode list1 = new ListNode(1,
+                new ListNode(2,
+                        new ListNode(4)));
+
+        // list2: 1 -> 3 -> 4
+        ListNode list2 = new ListNode(1,
+                new ListNode(3,
+                        new ListNode(4)));
+         mergeTwoLists(list1, list2);
     }
 
      public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -19,7 +26,6 @@ class ListNode{
     int value;
     ListNode next;
     ListNode(int value){
-       this.next=null;
        this.value=value;
     }
     ListNode(int value,ListNode listNode){
